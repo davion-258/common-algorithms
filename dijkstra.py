@@ -3,6 +3,9 @@ import heapq
 from collections import defaultdict
 from typing import List
 
+# O(E+ElogV)
+# * Building graph: O(E)
+# * Poping and adding priority queue: O(E*logE), but E is at most V(V-1) => logE < logV^2 = 2logV => O(E*logV)
 def maxProbability(n: int, edges: List[List[int]], succProb: List[float], start_node: int, end_node: int) -> float:
     # Build graph with weight (succProb)
     g = defaultdict(list)
