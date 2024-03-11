@@ -1,5 +1,6 @@
 # . . . [x] x x x . . . 
 #        ^
+# a[i] <= x
 def bisect_left(a, x, lo=0, hi=None):
     if hi is None:
         hi = len(a)
@@ -15,6 +16,7 @@ def bisect_left(a, x, lo=0, hi=None):
 
 # . . . x x x x [.] . . 
 #                ^
+# a[i] > x
 def bisect_right(a, x, lo=0, hi=None):
     if hi is None:
         hi = len(a)
