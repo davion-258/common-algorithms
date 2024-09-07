@@ -13,7 +13,7 @@ class Solution:
             unfilled_len = k - arr_pos - 1
             for i in range(cur_num, n - unfilled_len + 1):
                 arr[arr_pos] = i # fill num at arr_pos
-                backtrack(arr_pos + 1, i + 1) # fill num at the left positions
+                backtrack(arr_pos + 1, i + 1) # fill num at the right positions
         backtrack(0, 1)
         return ans
         
