@@ -1,11 +1,12 @@
 class UnionFind:
     def __init__(self, n):
         self.parent = list(range(n))
-        self.rank = [1] * n
+        self.rank = [1] * n # height from a node
 
     def find(self, x):
         if x == self.parent[x]:
             return x
+        # IMPROVEMENT: reduce find
         self.parent[x] = self.find(self.parent[x])
         return self.parent[x]
     

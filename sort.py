@@ -5,6 +5,8 @@
 #   best: O(n): array the same
 # Merge sort:
 #   always: O(nlogn)
+from typing import List
+
 class Solution:
     def sortArray(self, nums: List[int]) -> List[int]:
         # return self.mergeSort(nums, 0, len(nums))
